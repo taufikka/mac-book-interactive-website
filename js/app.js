@@ -22,9 +22,10 @@ function totalCalculation() {
     const deliveryCost = document.getElementById('delivery-charge');
     const deliveryCostNumber = parseInt(deliveryCost.innerText);
 
+    // set total price
     totalPrice.innerText = memoryCostNumber + storageCostNumber + deliveryCostNumber + 1299;
 
-    // grand total
+    // set grand total
     const totalPrice2 = document.getElementById('grand-total');
     totalPrice2.innerText = totalPrice.innerText;
 
@@ -67,7 +68,7 @@ document.getElementById('promo-btn').addEventListener('click', function () {
     const totalPrice = document.getElementById('total-price');
     let totalPriceNumber = parseFloat(totalPrice.innerText);
 
-    // set grand total price
+    // set grand total price after promo
     const total = document.getElementById('grand-total');
     if (promoInput.value == 'stevekaku') {
         // 20% discount apply
