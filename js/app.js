@@ -78,7 +78,7 @@ document.getElementById('promo-btn').addEventListener('click', function () {
         promoInput.value = '';
     } else {
         // wrong promo code apply
-        alert("Wrong promo!!");
+        alert("Wrong promo code applied!!");
         total.innerText = totalPriceNumber;
         promoInput.value = '';
     }
