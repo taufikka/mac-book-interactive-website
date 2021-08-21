@@ -57,7 +57,7 @@ document.getElementById('second-delivery-charge').addEventListener('click', func
     setPrice('delivery-charge', 20);
 })
 
-// promo code apply
+// promo code apply event
 document.getElementById('promo-btn').addEventListener('click', function () {
 
     // promo code field
