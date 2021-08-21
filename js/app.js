@@ -57,3 +57,28 @@ document.getElementById('second-delivery-charge').addEventListener('click', func
     setPrice('delivery-charge', 20);
 })
 
+// promo code apply
+document.getElementById('promo-btn').addEventListener('click', function () {
+
+    // promo code field
+    const promoInput = document.getElementById('promo-confirm');
+
+    // get total price
+    const totalPrice = document.getElementById('total-price');
+    let totalPriceNumber = parseFloat(totalPrice.innerText);
+
+    // set grand total price
+    const total = document.getElementById('grand-total');
+    if (promoInput.value == 'stevekaku') {
+        // 20% discount apply
+        const newTotal = totalPriceNumber * 0.2;
+        const newTotal2 = totalPriceNumber - newTotal;
+        total.innerText = newTotal2;
+        promoInput.value = '';
+    } else {
+        // wrong promo code apply
+        alert("Wrong promo!!");
+        total.innerText = totalPriceNumber;
+        promoInput.value = '';
+    }
+})
